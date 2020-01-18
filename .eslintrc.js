@@ -6,6 +6,9 @@ module.exports = {
   },
   extends: [
     'airbnb-base',
+    'eslint:recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
   ],
   globals: {
     Atomics: 'readonly',
@@ -22,6 +25,7 @@ module.exports = {
   ],
   rules: {
     'import/prefer-default-export': 'off',
+    'no-plusplus': 'off',
     'no-console': 'off',
     'import/named': 'off',
     'import/extensions': [
