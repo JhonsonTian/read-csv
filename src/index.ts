@@ -1,5 +1,8 @@
-function test(): void {
-  console.log('test exit');
-}
+import { CsvFileReader } from './CsvFileReader';
+import { MatchReader } from './MatchReader';
+import { WinsAnalysis } from './WinsAnalysis';
 
-test();
+const csvReader = CsvFileReader('football.csv');
+const matchReader = MatchReader(csvReader);
+const analysis = WinsAnalysis('Man United');
+analysis.analyze(matchReader.matches);
